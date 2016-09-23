@@ -29,7 +29,7 @@ The solution is aligned with the TDD approach. Jasmine along with angular-mocks 
 
 # Additional Notes
 
-Since the application uses AJAX calls to fetch data from a different domain (CORS - Cross Origin Resource Sharing), there can be a cross domain issue while running the program. Hence, as precursor, do the following depending on the browser used. 
+Since the application uses AJAX calls to fetch data from a different domain (CORS - Cross Origin Resource Sharing), there can be a cross domain issue while running the program. Hence, do the following depending on the browser being used. 
 
 - Google Chrome : Disable web security.
 - Internet Explorer : "Allow blocked content" when prompted. 
