@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+
+
+<html>
+
+<head>
+    <title>Pets </title>
+</head>
+<script src="lib/angular.js"> </script>
+<script src="js/app.js"> </script>
+<link href="css/jasmine.css" rel="stylesheet" type="text/css" />
+<script src="lib/jasmine.js" type="text/javascript"></script>
+<script src="lib/jasmine-html.js" type="text/javascript"></script>
+<script src="lib/boot.js" type="text/javascript"></script>
+<script src="lib/angular-mocks.js"></script>
+<script src="js/testSpec.js"></script>
+
+
+<body ng-app="Pets" ng-controller="PetsController as petsVm">
+    
+
+    <div ng-if="false">
+        <h2>Male</h2>
+        <ul>
+            <li ng-repeat="pet in petsVm.getCatsOfOwner('Male') | orderBy : 'name'" ng-bind="pet.name">
+            </li>
+        </ul>
+
+
+        <h2>Female</h2>
+        <ul>
+            <li ng-repeat="pet in petsVm.getCatsOfOwner('Female') | orderBy : 'name'" ng-bind="pet.name">
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+
+</html>

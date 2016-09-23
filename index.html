@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+
+
+<html>
+
+<head>
+    <title>Pets </title>
+</head>
+<script src="lib/angular.js"> </script>
+<script src="js/app.js"> </script>
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
+
+<body ng-app="Pets" ng-controller="PetsController">
+    <h1>Pets Details According to Gender of the Owner</h1>
+
+    <div class="loader" ng-if="isLoading">
+        <img class="loader-image" src="images/blue-circle-loader.gif" />
+    </div>
+
+    <div ng-if="isDataAvailable">
+        <h2>Cats of Male Owners</h2>
+        <ul>
+            <li ng-repeat="pet in getCatsOfOwner('Male') | orderBy : 'name'" ng-bind="pet.name">
+            </li>
+        </ul>
+
+
+        <h2>Cats of Female Owners</h2>
+        <ul>
+            <li ng-repeat="pet in getCatsOfOwner('Female') | orderBy : 'name'" ng-bind="pet.name">
+            </li>
+        </ul>
+    </div>
+
+    <div class="error-message" ng-bind="errorMessage">
+
+    </div>
+
+</body>
+
+
+</html>
